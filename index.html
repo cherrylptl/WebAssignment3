@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assignment 2 - Forms and Validations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+    <script type="text/javascript" src="js\custom.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="green-text">QUANTUMBYTE SOLUTIONS</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container-grid">
+            <section>
+                <div class="slider">
+                    <h1>Select Products</h1>
+                    <br>
+                    <div class="product-card">
+                        <div class="product-info">
+                            <img src="image\laptop.jpeg" alt="Laptop">
+                            <div class="product-details">
+                                <h2>Laptop</h2>
+                                <p>$100</p>
+                            </div>
+                        </div>
+                        <div class="quantity">
+                            <label for="product1">Quantity:</label>
+                            <input type="number" id="product1" name="product1" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-info">
+                            <img src="image\keyboard.jpg" alt="Keyboard">
+                            <div class="product-details">
+                                <h2>Keyboard</h2>
+                                <p>$5</p>
+                            </div>
+                        </div>
+                        <div class="quantity">
+                            <label for="product1">Quantity:</label>
+                            <input type="number" id="product2" name="product2" min="0" value="0">
+                        </div>
+                    </div>
+
+
+                    <div class="product-card">
+                        <div class="product-info">
+                            <img src="image\mouse.jpg" alt="Mouse">
+                            <div class="product-details">
+                                <h2>Mouse</h2>
+                                <p>$4</p>
+                            </div>
+                        </div>
+                        <div class="quantity">
+                            <label for="product3">Quantity:</label>
+                            <input type="number" id="product3" name="product3" min="0" value="0">
+                        </div>
+                    </div>
+
+
+                    <div class="product-card">
+                        <div class="product-info">
+                            <img src="image\headphone.jpg" alt="HeadPhone">
+                            <div class="product-details">
+                                <h2>HeadPhone</h2>
+                                <p>$4</p>
+                            </div>
+                        </div>
+                        <div class="quantity">
+                            <label for="product4">Quantity:</label>
+                            <input type="number" id="product4" name="product4" min="0" value="0">
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+
+
+
+            <div class="slider">
+                <form name="myform" method="Post" onsubmit="return formSubmit();" action="">
+
+                    <h1>Customer Details</h1>
+                    <br>
+                    <label>Name:</label>
+                    <input id="name" placeholder="First Last" type="text" name="name" required>
+
+                    <label>Email:</label>
+                    <input id="email" placeholder="email@domain.com" type="email" name="email" required>
+
+                    <label>Phone:</label>
+                    <input id="phone" placeholder="123-123-1234" type="text" name="phone" required>
+
+                    <label>Address:</label>
+                    <input id="address" placeholder="Address" type="text" name="address" required>
+
+                    <label>City:</label>
+                    <input id="city" placeholder="City" type="text" name="city" required>
+
+                    <label>Postcode:</label>
+                    <input id="postcode" placeholder="X0X 0X0" type="text" name="postcode" required>
+
+                    <label>Province:</label>
+                    <select id="province" name="province =" required>
+                        <option value="" disabled selected>Select Province</option>
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="BFL">Newfoundland and Labrador</option>
+                        <option value="NT">Northwest Territories</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PEI">Prince Edward Island</option>
+                        <option value="QU">Quebec</option>
+                        <option value="SA">Saskatchewan</option>
+                        <option value="YU">Yukon</option>
+                    </select>
+
+                    <br><br>
+
+                    <h1>Card Details</h1>
+                    <br>
+                    <label>Credit Card:</label>
+                    <input id="creditcard" placeholder="1234-1234-1234-1234" type="text" name="creditcard" required>
+
+                    <div class="creditcard-expiry">
+                        <label for="expirydate">Expiry Date:</label>
+                        <input id="expirydate" placeholder="MMM" type="text" name="expirydate" required>
+                        <input id="year" placeholder="YYYY" type="text" name="year" required>
+                    </div>
+
+                    <h1>Password</h1>
+                    <br>
+                    <label>Password:</label>
+                    <input id="password" placeholder="Password" type="password" name="password" required>
+
+                    <label>Confirm Password:</label>
+                    <input id="confirmPassword" placeholder="Confirm Password" type="password" name="confirmPassword"
+                        required>
+
+                    <br><br><br>
+
+                    <input type="submit" value="Place Order">
+                    <p id="errors">
+                        <span id="cityError"></span>
+                        <span id="provinceError"></span>
+                    </p>
+                </form>
+            </div>
+
+            <div class="slider">
+                <h1>Receipt Details</h1>
+                <p id="formResult">The receipt will show .</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 QUANTUMBYTE SOLUTIONS PVT LTD . All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    background-color: #212121;
+    padding: 10px;
+    text-align: center;
+}
+
+.green-text {
+    color: #1db954;
+    font-weight: bold;
+    margin: 0;
+    font-size: 36px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-container-grid {
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.slider {
+    padding: 20px;
+    margin-left: min 30%;
+    margin-right: min 30%;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+form {
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 20px;
+}
+
+label {
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    color: #fff;
+}
+
+input:not([type="radio"]),
+select {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px 10px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+}
+
+.creditcard-expiry {
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    margin-right: 2px;
+}
+
+#expirydate,
+#year {
+    width: 400%;
+
+}
+
+input[type="submit"] {
+    width: 100%;
+    font-size: 22px;
+    background-color: #1db954;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border: 0px;
+    padding: 10px;
+    height: 50px;
+    box-shadow: 4px 4px 0px #1db954;
+    border-radius: 20px;
+}
+
+input[type="submit"]:active {
+    box-shadow: -4px -4px 0px #1db954;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3px;
+    background-color: #212121;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-container-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 90%;
+        max-width: none;
+    }
+
+    label {
+        width: 100%;
+    }
+
+    .creditcard-expiry {
+        flex-direction: column;
+    }
+
+    #expirydate,
+    #year {
+        width: 100%;
+    }
+}
+
+.product-card {
+    background-color: #212121;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.product-info img {
+    max-width: 20%;
+    margin-right: 10px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details h2 {
+    margin-bottom: 5px;
+}
+
+.quantity input {
+    height: 45px;
+}
