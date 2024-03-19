@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css\style.css">
-    <script type="text/javascript" src="js\custom.js"></script>
+
 </head>
 
 <body>
@@ -20,10 +20,12 @@
 
     <main>
         <div class="main-container-grid">
-            <section>
+            <form name="myform" method="POST" action="php\validation.php">
+
                 <div class="slider">
                     <h1>Select Products</h1>
                     <br>
+
                     <div class="product-card">
                         <div class="product-info">
                             <img src="image\laptop.jpeg" alt="Laptop">
@@ -34,7 +36,7 @@
                         </div>
                         <div class="quantity">
                             <label for="product1">Quantity:</label>
-                            <input type="number" id="product1" name="product1" min="0" value="0">
+                            <input type="number" id="product1" name="product1" value="0">
                         </div>
                     </div>
 
@@ -48,10 +50,9 @@
                         </div>
                         <div class="quantity">
                             <label for="product1">Quantity:</label>
-                            <input type="number" id="product2" name="product2" min="0" value="0">
+                            <input type="number" id="product2" name="product2" value="0">
                         </div>
                     </div>
-
 
                     <div class="product-card">
                         <div class="product-info">
@@ -63,10 +64,9 @@
                         </div>
                         <div class="quantity">
                             <label for="product3">Quantity:</label>
-                            <input type="number" id="product3" name="product3" min="0" value="0">
+                            <input type="number" id="product3" name="product3" value="0">
                         </div>
                     </div>
-
 
                     <div class="product-card">
                         <div class="product-info">
@@ -78,43 +78,37 @@
                         </div>
                         <div class="quantity">
                             <label for="product4">Quantity:</label>
-                            <input type="number" id="product4" name="product4" min="0" value="0">
+                            <input type="number" id="product4" name="product4" value="0">
                         </div>
                     </div>
 
-
-
                 </div>
-            </section>
+                <br>
 
-
-
-
-            <div class="slider">
-                <form name="myform" method="Post" onsubmit="return formSubmit();" action="">
+                <div class="slider">
 
                     <h1>Customer Details</h1>
                     <br>
                     <label>Name:</label>
-                    <input id="name" placeholder="First Last" type="text" name="name" required>
+                    <input id="name" placeholder="First Last" type="text" name="name">
 
                     <label>Email:</label>
-                    <input id="email" placeholder="email@domain.com" type="email" name="email" required>
+                    <input id="email" placeholder="email@domain.com" type="email" name="email">
 
                     <label>Phone:</label>
-                    <input id="phone" placeholder="123-123-1234" type="text" name="phone" required>
+                    <input id="phone" placeholder="123-123-1234" type="text" name="phone">
 
                     <label>Address:</label>
-                    <input id="address" placeholder="Address" type="text" name="address" required>
+                    <input id="address" placeholder="Address" type="text" name="address">
 
                     <label>City:</label>
-                    <input id="city" placeholder="City" type="text" name="city" required>
+                    <input id="city" placeholder="City" type="text" name="city">
 
                     <label>Postcode:</label>
-                    <input id="postcode" placeholder="X0X 0X0" type="text" name="postcode" required>
+                    <input id="postcode" placeholder="X0X 0X0" type="text" name="postcode">
 
                     <label>Province:</label>
-                    <select id="province" name="province =" required>
+                    <select id="province" name="province" required>
                         <option value="" disabled selected>Select Province</option>
                         <option value="AB">Alberta</option>
                         <option value="BC">British Columbia</option>
@@ -136,22 +130,21 @@
                     <h1>Card Details</h1>
                     <br>
                     <label>Credit Card:</label>
-                    <input id="creditcard" placeholder="1234-1234-1234-1234" type="text" name="creditcard" required>
+                    <input id="creditcard" placeholder="1234-1234-1234-1234" type="text" name="creditcard">
 
                     <div class="creditcard-expiry">
                         <label for="expirydate">Expiry Date:</label>
-                        <input id="expirydate" placeholder="MMM" type="text" name="expirydate" required>
-                        <input id="year" placeholder="YYYY" type="text" name="year" required>
+                        <input id="expirydate" placeholder="MMM" type="text" name="expirydate">
+                        <input id="year" placeholder="YYYY" type="text" name="year">
                     </div>
 
                     <h1>Password</h1>
                     <br>
                     <label>Password:</label>
-                    <input id="password" placeholder="Password" type="password" name="password" required>
+                    <input id="password" placeholder="Password" type="password" name="password">
 
                     <label>Confirm Password:</label>
-                    <input id="confirmPassword" placeholder="Confirm Password" type="password" name="confirmPassword"
-                        required>
+                    <input id="confirmPassword" placeholder="Confirm Password" type="password" name="confirmPassword">
 
                     <br><br><br>
 
@@ -160,13 +153,9 @@
                         <span id="cityError"></span>
                         <span id="provinceError"></span>
                     </p>
-                </form>
-            </div>
 
-            <div class="slider">
-                <h1>Receipt Details</h1>
-                <p id="formResult">The receipt will show .</p>
-            </div>
+                </div>
+            </form>
         </div>
     </main>
     <footer>
