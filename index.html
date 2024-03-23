@@ -4,11 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Assignment 2 - Forms and Validations</title>
+    <title>Assignment 3 - Server Side Validations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css\style.css">
-
 </head>
 
 <body>
@@ -30,7 +29,7 @@
                         <div class="product-info">
                             <img src="image\laptop.jpeg" alt="Laptop">
                             <div class="product-details">
-                                <h2>Laptop</h2>
+                                <h3>Laptop</h3>
                                 <p>$100</p>
                             </div>
                         </div>
@@ -44,12 +43,12 @@
                         <div class="product-info">
                             <img src="image\keyboard.jpg" alt="Keyboard">
                             <div class="product-details">
-                                <h2>Keyboard</h2>
+                                <h3>Keyboard</h3>
                                 <p>$5</p>
                             </div>
                         </div>
                         <div class="quantity">
-                            <label for="product1">Quantity:</label>
+                            <label for="product2">Quantity:</label>
                             <input type="number" id="product2" name="product2" value="0">
                         </div>
                     </div>
@@ -58,7 +57,7 @@
                         <div class="product-info">
                             <img src="image\mouse.jpg" alt="Mouse">
                             <div class="product-details">
-                                <h2>Mouse</h2>
+                                <h3>Mouse</h3>
                                 <p>$4</p>
                             </div>
                         </div>
@@ -72,7 +71,7 @@
                         <div class="product-info">
                             <img src="image\headphone.jpg" alt="HeadPhone">
                             <div class="product-details">
-                                <h2>HeadPhone</h2>
+                                <h3>HeadPhone</h3>
                                 <p>$4</p>
                             </div>
                         </div>
@@ -83,6 +82,7 @@
                     </div>
 
                 </div>
+
                 <br>
 
                 <div class="slider">
@@ -93,7 +93,7 @@
                     <input id="name" placeholder="First Last" type="text" name="name">
 
                     <label>Email:</label>
-                    <input id="email" placeholder="email@domain.com" type="email" name="email">
+                    <input id="email" placeholder="email@domain.com" type="text" name="email">
 
                     <label>Phone:</label>
                     <input id="phone" placeholder="123-123-1234" type="text" name="phone">
@@ -108,7 +108,7 @@
                     <input id="postcode" placeholder="X0X 0X0" type="text" name="postcode">
 
                     <label>Province:</label>
-                    <select id="province" name="province" required>
+                    <select id="province" name="province">
                         <option value="" disabled selected>Select Province</option>
                         <option value="AB">Alberta</option>
                         <option value="BC">British Columbia</option>
@@ -149,12 +149,8 @@
                     <br><br><br>
 
                     <input type="submit" value="Place Order">
-                    <p id="errors">
-                        <span id="cityError"></span>
-                        <span id="provinceError"></span>
-                    </p>
-
                 </div>
+
             </form>
         </div>
     </main>

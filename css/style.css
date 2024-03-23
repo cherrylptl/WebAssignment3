@@ -30,7 +30,6 @@ body {
 
 .main-container-grid {
     padding: 50px;
-
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
